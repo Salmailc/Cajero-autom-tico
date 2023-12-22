@@ -1,0 +1,44 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}    
+
+.dropdown{
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px 10px 10px;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.p-contraseña{
+    display: flex;
+    justify-content: center;
+}
+
+.b-login{
+    margin: 2rem;
+}
+
+
+.opciones {
+    font-size: x-large;
+}
+
+.sec-btn{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+}
+.bt-menu{
+    width: 500px;
+    margin: auto;
+}

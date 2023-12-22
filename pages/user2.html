@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menú</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="icon" type="svg" sizes="32x32" href="../images/savings.svg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-white py-5">
+    <header>
+        <img src="../images/savings.svg" height="80" width="80" alt="">
+        <h1 class="text-center">Banco DEVF</h1>
+    </header>
+    <h2 class="n-user text-center">Hola Apu</h2>
+    <p class="m-4 text-center opciones">¿Qué movimiento deseas hacer?</p>
+    <!--Botones de menu-->
+    <section class="sec-btn">
+        <button type="button" id="saldo" class="btn btn-secondary bt-menu" data-bs-toggle="modal" data-bs-target="#saldoModal">Consultar saldo</button>
+
+        <button type="button" id="depositar" class="btn btn-primary bt-menu" data-bs-toggle="modal" data-bs-target="#depositoModal">Depositar</button>
+
+        <button type="button" id="retirar" class="btn btn-success bt-menu" data-bs-toggle="modal" data-bs-target="#retiroModal">Retirar</button>
+    </section>
+
+    <!-- Modal -->
+    <!--Modal consultar saldo-->
+    <div class="modal fade" id="saldoModal" tabindex="-1" aria-labelledby="saldoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="saldoModalLabel">Saldo disponible</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="montoSaldo" id="montoSaldo"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal deposito-->
+    <div class="modal fade" id="depositoModal" tabindex="-1" aria-labelledby="depositoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="depositoModalLabel">Depositar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-deposito"> <!--Formulario depositar-->
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Ingresa el monto a depositar:</label>
+                            <input type="number" class="form-control" id="deposito-num">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="btn-depositar">Depositar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal retiro-->
+    <div class="modal fade" id="retiroModal" tabindex="-1" aria-labelledby="retiroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="retiroModalLabel">Retirar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="less-num" class="col-form-label">Ingresa el monto a Retirar:</label>
+                            <input type="number" class="form-control" id="less-num">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="btn-retirar">Retirar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--Modal confirmación-->
+    <div class="modal fade" id="confirmRetiroModal" tabindex="-1" aria-labelledby="confirmRetiroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="confirmRetiroModalLabel">¿Esta seguro?</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" >
+                  <h6 id="alert-message"></h6>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>  
+    
+    <script src="../js/user2.js"></script>
+</body>
+</html>
